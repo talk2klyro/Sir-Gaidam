@@ -2,162 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-  <meta name="theme-color" content="#0d6efd" />
-  <title>Sir Haruna Garba Gaidam | RCHP 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Dr. Haruna Garba Geidam | Community Health Officer | Essential Drugs Manager | Educator | Yobe State, Nigeria" />
+  <title>Haruna Garba Geidam | Health Architect 2025</title>
 
-  <!-- Poppins & Space Grotesk for Futuristic Typing -->
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <!-- Fonts: Space Grotesk (futuristic), Poppins (clean) -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
     :root {
-      --primary: #0ea5e9; /* Cyan-500 - Future Blue */
-      --primary-glow: 0 0 20px rgba(14, 165, 233, 0.4);
-      --secondary: #8b5cf6; /* Purple-500 */
-      --success: #10b981;
-      --dark: #0f172a; /* Cool black */
+      --care: #0ea5e9; /* Sky Blue - Healthcare */
+      --edu: #8b5cf6;  /* Violet - Education */
+      --log: #0d9ca3;  /* Teal - Logistics */
+      --dark: #0f172a;
       --darker: #0a0e1a;
       --light: #f1f5f9;
       --gray: #94a3b8;
-      --card: rgba(255, 255, 255, 0.1);
-      --radius: 20px;
+      --card: rgba(255, 255, 255, 0.08);
+      --hover: rgba(255, 255, 255, 0.15);
+      --radius: 24px;
       --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-      --elevate: 0 5px 15px rgba(0, 0, 0, 0.08);
-      --float: translateY(-5px);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --light: #0f172a;
-        --card: rgba(15, 23, 42, 0.6);
-      }
+      --shadow: 0 12px 36px rgba(0, 0, 0, 0.16);
+      --float: translateY(-6px);
+      --glow-care: 0 0 24px rgba(14, 165, 233, 0.3);
+      --glow-edu: 0 0 24px rgba(139, 92, 246, 0.3);
+      --glow-log: 0 0 24px rgba(13, 156, 163, 0.3);
     }
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      outline: none;
     }
 
     body {
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       color: white;
       font-family: 'Poppins', sans-serif;
-      line-height: 1.7;
+      line-height: 1.8;
       min-height: 100vh;
       backdrop-filter: blur(2px);
       overflow-x: hidden;
-      transition: background 1.5s ease;
-    }
-
-    /* Auto Dark Mode Based on Time */
-    body.day {
-      background: linear-gradient(135deg, #e0f2fe 0%, #f1f5f9 100%);
-      color: #0f172a;
-    }
-
-    body.day .card,
-    body.day .btn,
-    body.day header {
-      background: rgba(255, 255, 255, 0.4);
-    }
-
-    body.day h1, body.day .title, body.day p, body.day .btn {
-      color: #0f172a;
-    }
-
-    body.day .btn {
-      backdrop-filter: blur(10px);
     }
 
     header {
       text-align: center;
-      padding: 60px 20px 40px;
-      backdrop-filter: blur(12px);
-      background: var(--card);
+      padding: 70px 20px 50px;
+      backdrop-filter: blur(16px);
+      background: rgba(15, 23, 42, 0.2);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      margin: 20px auto 30px;
-      max-width: 900px;
+      margin: 24px auto 32px;
+      max-width: 960px;
       position: relative;
       overflow: hidden;
-      border: 1px solid rgba(14, 165, 233, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .glow-container {
-      position: relative;
+    /* Symbolic Identity: No Photo, Just Meaning */
+    .identity-symbol {
       width: 160px;
       height: 160px;
-      margin: 0 auto 24px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 2px solid var(--primary);
-      box-shadow: var(--primary-glow);
-    }
-
-    .halo {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      border-radius: 50%;
-      background: radial-gradient(
-        circle at center,
-        transparent 40%,
-        rgba(14, 165, 233, 0.2) 60%,
-        rgba(14, 165, 233, 0.4) 80%,
-        transparent 100%
-      );
-      animation: breathe 4s infinite ease-in-out;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .avatar-frame {
+      margin: 0 auto 28px;
       position: relative;
-      width: 100%;
-      height: 100%;
-      background: #0a0e1a;
       display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 2;
-      overflow: hidden;
     }
 
-    .avatar-frame::after {
-      content: '';
+    .hexagon {
       position: absolute;
-      width: 120%;
-      height: 120%;
+      width: 100%;
+      height: 100%;
       background: conic-gradient(
-        from 0deg,
-        transparent,
-        var(--primary),
-        transparent,
-        var(--secondary),
-        transparent
+        var(--care),
+        var(--edu),
+        var(--log),
+        var(--care)
       );
-      animation: rotate 6s linear infinite;
-      border-radius: 50%;
-      z-index: -1;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      animation: rotate 8s linear infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .avatar {
-      width: 90%;
-      height: 90%;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid rgba(255, 255, 255, 0.3);
-    }
-
-    @keyframes breathe {
-      0%, 100% { opacity: 0.4; transform: scale(1); }
-      50% { opacity: 0.8; transform: scale(1.05); }
+    .inner {
+      width: 80%;
+      height: 80%;
+      background: #0f172a;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      color: white;
+      font-size: 1.4rem;
+      text-align: center;
+      letter-spacing: -0.5px;
     }
 
     @keyframes rotate {
@@ -167,36 +111,43 @@
 
     h1 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 2.6rem;
-      background: linear-gradient(to right, #0ea5e9, #8b5cf6);
+      font-size: 2.8rem;
+      background: linear-gradient(90deg, var(--care), var(--edu), var(--log));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       font-weight: 700;
-      letter-spacing: -0.5px;
+      letter-spacing: -1px;
     }
 
-    .title {
-      font-size: 1.3rem;
-      color: var(--primary);
-      margin-bottom: 12px;
+    .roles {
+      font-size: 1.2rem;
+      color: white;
+      margin-bottom: 14px;
       font-weight: 500;
+    }
+
+    .roles span {
+      background: var(--card);
+      padding: 6px 12px;
+      border-radius: 12px;
+      margin: 0 6px;
+      font-size: 0.95rem;
     }
 
     .tagline {
       color: var(--gray);
-      font-size: 1rem;
-      margin-bottom: 20px;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 24px;
+      font-weight: 400;
     }
 
     .contact-strip {
       display: flex;
       justify-content: center;
       gap: 16px;
-      margin-top: 20px;
+      margin-top: 24px;
       flex-wrap: wrap;
     }
 
@@ -204,85 +155,306 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 14px 24px;
-      background: rgba(14, 165, 233, 0.2);
+      padding: 14px 26px;
+      background: rgba(255, 255, 255, 0.1);
       color: white;
-      border: 1px solid rgba(14, 165, 233, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 999px;
       cursor: pointer;
       font-size: 1rem;
       font-weight: 500;
       transition: var(--transition);
-      box-shadow: 0 4px 15px rgba(14, 165, 233, 0.2);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
       backdrop-filter: blur(10px);
     }
 
     .btn:hover {
-      background: rgba(14, 165, 233, 0.4);
       transform: var(--float);
-      box-shadow: 0 8px 25px rgba(14, 165, 233, 0.35);
+      box-shadow: 0 12px 30px rgba(14, 165, 233, 0.3);
+      background: rgba(14, 165, 233, 0.2);
+      border-color: var(--care);
+    }
+
+    .btn.edu:hover {
+      background: rgba(139, 92, 246, 0.2);
+      border-color: var(--edu);
+      box-shadow: 0 12px 30px rgba(139, 92, 246, 0.3);
+    }
+
+    .btn.log:hover {
+      background: rgba(13, 156, 163, 0.2);
+      border-color: var(--log);
+      box-shadow: 0 12px 30px rgba(13, 156, 163, 0.3);
     }
 
     .btn i {
-      font-size: 1.3em;
-      color: var(--primary);
+      font-size: 1.2em;
+      color: inherit;
     }
 
     section {
       backdrop-filter: blur(12px);
       background: var(--card);
-      padding: 32px;
+      padding: 36px;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       margin: 20px auto 30px;
-      max-width: 900px;
+      max-width: 960px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: var(--transition);
+    }
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Dr. Haruna Garba Geidam | Community Health Officer | Essential Drugs Manager | Educator | Yobe State, Nigeria" />
+  <title>Haruna Garba Geidam | Health Architect 2025</title>
+
+  <!-- Fonts: Space Grotesk (futuristic), Poppins (clean) -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    :root {
+      --care: #0ea5e9; /* Sky Blue - Healthcare */
+      --edu: #8b5cf6;  /* Violet - Education */
+      --log: #0d9ca3;  /* Teal - Logistics */
+      --dark: #0f172a;
+      --darker: #0a0e1a;
+      --light: #f1f5f9;
+      --gray: #94a3b8;
+      --card: rgba(255, 255, 255, 0.08);
+      --hover: rgba(255, 255, 255, 0.15);
+      --radius: 24px;
+      --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --shadow: 0 12px 36px rgba(0, 0, 0, 0.16);
+      --float: translateY(-6px);
+      --glow-care: 0 0 24px rgba(14, 165, 233, 0.3);
+      --glow-edu: 0 0 24px rgba(139, 92, 246, 0.3);
+      --glow-log: 0 0 24px rgba(13, 156, 163, 0.3);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.8;
+      min-height: 100vh;
+      backdrop-filter: blur(2px);
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 70px 20px 50px;
+      backdrop-filter: blur(16px);
+      background: rgba(15, 23, 42, 0.2);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin: 24px auto 32px;
+      max-width: 960px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Symbolic Identity: No Photo, Just Meaning */
+    .identity-symbol {
+      width: 160px;
+      height: 160px;
+      margin: 0 auto 28px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hexagon {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: conic-gradient(
+        var(--care),
+        var(--edu),
+        var(--log),
+        var(--care)
+      );
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      animation: rotate 8s linear infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .inner {
+      width: 80%;
+      height: 80%;
+      background: #0f172a;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      color: white;
+      font-size: 1.4rem;
+      text-align: center;
+      letter-spacing: -0.5px;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.8rem;
+      background: linear-gradient(90deg, var(--care), var(--edu), var(--log));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    .roles {
+      font-size: 1.2rem;
+      color: white;
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+
+    .roles span {
+      background: var(--card);
+      padding: 6px 12px;
+      border-radius: 12px;
+      margin: 0 6px;
+      font-size: 0.95rem;
+    }
+
+    .tagline {
+      color: var(--gray);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 24px;
+      font-weight: 400;
+    }
+
+    .contact-strip {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 26px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: var(--transition);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn:hover {
+      transform: var(--float);
+      box-shadow: 0 12px 30px rgba(14, 165, 233, 0.3);
+      background: rgba(14, 165, 233, 0.2);
+      border-color: var(--care);
+    }
+
+    .btn.edu:hover {
+      background: rgba(139, 92, 246, 0.2);
+      border-color: var(--edu);
+      box-shadow: 0 12px 30px rgba(139, 92, 246, 0.3);
+    }
+
+    .btn.log:hover {
+      background: rgba(13, 156, 163, 0.2);
+      border-color: var(--log);
+      box-shadow: 0 12px 30px rgba(13, 156, 163, 0.3);
+    }
+
+    .btn i {
+      font-size: 1.2em;
+      color: inherit;
+    }
+
+    section {
+      backdrop-filter: blur(12px);
+      background: var(--card);
+      padding: 36px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin: 20px auto 30px;
+      max-width: 960px;
       border: 1px solid rgba(255, 255, 255, 0.08);
       transition: var(--transition);
     }
 
     section:hover {
       transform: var(--float);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
+      background: var(--hover);
     }
 
     h2 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       color: white;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       position: relative;
     }
 
     h2::before {
       content: '';
       position: absolute;
-      left: -10px;
+      left: -12px;
       top: 0;
       bottom: 0;
-      width: 5px;
-      background: var(--primary);
-      border-radius: 10px;
+      width: 6px;
+      background: linear-gradient(to bottom, var(--care), var(--edu), var(--log));
+      border-radius: 12px;
     }
 
     h2 i {
-      background: var(--primary);
-      color: white;
-      width: 40px;
-      height: 40px;
+      background: white;
+      color: var(--dark);
+      width: 44px;
+      height: 44px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 12px;
-      box-shadow: var(--primary-glow);
+      border-radius: 14px;
+      font-size: 1.2em;
     }
 
     p, ul, .item {
       color: var(--gray);
       margin-bottom: 16px;
       font-size: 0.95rem;
+      transition: var(--transition);
     }
 
     strong {
@@ -291,35 +463,40 @@
 
     .grid {
       display: grid;
-      gap: 20px;
+      gap: 24px;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
     .card {
       background: rgba(15, 23, 42, 0.5);
-      padding: 24px;
+      padding: 26px;
       border-radius: var(--radius);
-      border-left: 4px solid var(--primary);
+      border-left: 5px solid var(--care);
       transition: var(--transition);
       backdrop-filter: blur(8px);
-      border: 1px solid rgba(14, 165, 233, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 25px rgba(14, 165, 233, 0.15);
-      border-left-color: var(--secondary);
+      transform: translateY(-8px);
+      box-shadow: 0 16px 32px rgba(14, 165, 233, 0.18);
     }
 
     .card h3 {
       color: white;
       margin-bottom: 10px;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
+    }
+
+    .card .role {
+      font-size: 0.95rem;
+      color: var(--care);
+      font-weight: 500;
     }
 
     .card .date {
       font-size: 0.9rem;
-      color: var(--success);
+      color: var(--log);
       font-weight: 600;
     }
 
@@ -329,168 +506,215 @@
 
     ul li {
       position: relative;
-      padding-left: 20px;
-      margin-bottom: 10px;
+      padding-left: 28px;
+      margin-bottom: 12px;
+      transition: var(--transition);
+    }
+
+    ul li:hover {
+      color: white;
     }
 
     ul li::before {
-      content: '▹';
-      color: var(--primary);
+      content: '◆';
+      color: var(--edu);
       position: absolute;
       left: 0;
-      font-size: 1.1em;
+      top: 0;
+      font-size: 0.8em;
+      opacity: 0.8;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 40px;
       color: var(--gray);
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       margin-top: 40px;
     }
 
     footer a {
-      color: var(--primary);
+      color: var(--care);
       text-decoration: none;
+      font-weight: 500;
     }
 
     @media (max-width: 768px) {
       h1 {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
+      }
+      .roles {
+        font-size: 1rem;
       }
       .btn {
         width: 100%;
-        max-width: 320px;
+        max-width: 340px;
         justify-content: center;
       }
       section, header {
         margin-left: 16px;
         margin-right: 16px;
-        padding: 24px;
+        padding: 28px 20px;
       }
     }
   </style>
 </head>
 <body>
 
-  <header id="hero">
-    <!-- Future-Ready Avatar Ring -->
-    <div class="glow-container">
-      <div class="halo"></div>
-      <div class="avatar-frame">
-        <!-- Replace with real photo or AI-generated image -->
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=crop&h=200&w=200" alt="Sir Haruna Garba Gaidam" class="avatar" onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'40\' r=\'30\' fill=\'%230ea5e9\'/><rect x=\'35\' y=\'70\' width=\'30\' height=\'30\' rx=\'8\' fill=\'%230ea5e9\'/></svg>'">
+  <header>
+    <!-- Symbolic Identity: Hexagon of Roles -->
+    <div class="identity-symbol">
+      <div class="hexagon">
+        <div class="inner">HGG</div>
       </div>
     </div>
 
-    <h1>Sir Haruna Garba Gaidam</h1>
-    <div class="title">RCHP | Community Health Visionary</div>
+    <h1>Haruna Garba Geidam</h1>
+    <div class="roles">
+      <span>Community Health Officer</span>
+      <span>Essential Drugs Manager</span>
+      <span>Educator</span>
+    </div>
     <p class="tagline">
-      Advancing rural healthcare through innovation, empathy, and technology.
+      A decade of service. A lifetime of impact. Building resilient health systems in Yobe State and beyond.
     </p>
 
     <div class="contact-strip">
-      <a href="mailto:sirharunagaidam@almaarif.edu.ng" class="btn">
+      <a href="mailto:harunagg@example.com" class="btn">
         <i class="fas fa-envelope"></i> Email
       </a>
       <a href="https://wa.me/2347080033765" target="_blank" class="btn">
         <i class="fab fa-whatsapp"></i> WhatsApp
       </a>
+      <a href="https://facebook.com/harunagarba.geidam.9" target="_blank" class="btn edu">
+        <i class="fab fa-facebook"></i> Facebook
+      </a>
     </div>
   </header>
 
   <section>
-    <h2><i class="fas fa-user-md"></i> Profile & Bio</h2>
+    <h2><i class="fas fa-user-shield"></i> About Me</h2>
     <p>
-      <strong>Sir Haruna Garba Gaidam</strong> is a Registered Community Health Practitioner (RCHP) and final-year CHEW student at <strong>Alma'arif College of Nursing, Midwifery & Health Sciences</strong>. With a mission to revolutionize rural healthcare delivery, he combines clinical excellence with community-centered innovation.
+      I am a dedicated healthcare professional with over a decade of experience in primary health care management and community health education. My work focuses on ensuring efficient drug distribution, promoting community health initiatives, and mentoring the next generation of health professionals.
     </p>
     <p>
-      Trained in emergency response, maternal health, and disease surveillance, Sir Haruna is building a legacy of impact across Northeast Nigeria — one village at a time.
-    </p>
-  </section>
-
-  <section>
-    <h2><i class="fas fa-rocket"></i> Career Vision</h2>
-    <p>
-      To lead the digital transformation of primary healthcare in underserved regions by integrating mobile clinics, AI-driven diagnostics, and telemedicine outreach.
-    </p>
-    <p>
-      I envision a Nigeria where no mother walks 20km for prenatal care — where health equity is not a dream, but a system.
+      Recognized for leadership, integrity, and contributions to healthcare development in Yobe State, Nigeria, I strive to build systems that are sustainable, equitable, and scalable.
     </p>
   </section>
 
   <section>
-    <h2><i class="fas fa-certificate"></i> Academic Journey</h2>
+    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
     <div class="grid">
       <div class="card">
-        <h3>Diploma in CHEW</h3>
-        <p>Alma'arif College of Nursing, Midwifery & Health Sciences</p>
-        <div class="date">Expected: Aug 30, 2025</div>
+        <h3>Community Health Officer (CHO)</h3>
+        <p class="role">School of Health Technology, Yobe State</p>
+        <div class="date">Graduated: 2010</div>
       </div>
       <div class="card">
-        <h3>BLS & Emergency Care</h3>
-        <p>American Heart Association</p>
-        <div class="date">Certified: 2024</div>
+        <h3>Diploma in Public Administration</h3>
+        <p class="role">Federal Polytechnic, Bauchi</p>
+        <div class="date">Completed: 2014</div>
       </div>
     </div>
-  </section>
 
-  <section>
-    <h2><i class="fas fa-microscope"></i> Research & Innovation</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>AI for Rural Triage</h3>
-        <p>Prototyped a voice-based symptom checker for low-literacy populations using NLP in Hausa.</p>
-        <div class="date">Q2 2025</div>
-      </div>
-      <div class="card">
-        <h3>Vaccination Gap Study</h3>
-        <p>Identified 67% drop-off in rural immunization; led mobile campaign that recovered 82%.</p>
-        <div class="date">2024</div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2><i class="fas fa-hand-holding-medical"></i> Field Impact</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Mobile Clinic Lead | Yobe State</h3>
-        <p>Delivered care to 3,200+ patients across 14 villages. Reduced malaria cases by 41% in 6 months.</p>
-        <div class="date">2023 – Present</div>
-      </div>
-      <div class="card">
-        <h3>Telehealth Pilot | NCDC Partnership</h3>
-        <p>Connected remote clinics with specialists via satellite-powered consultation hubs.</p>
-        <div class="date">2024</div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2><i class="fas fa-award"></i> Certifications</h2>
+    <h3 style="margin: 20px 0 12px; color: white;">Short Courses</h3>
     <ul>
-      <li><strong>Registered Community Health Practitioner (RCHP)</strong> – FMoH, 2024</li>
-      <li><strong>Basic Life Support (BLS)</strong> – AHA</li>
-      <li><strong>Community Disease Surveillance</strong> – NCDC</li>
-      <li><strong>Health Data Privacy (HIPAA + NDPR)</strong></li>
+      <li><strong>Essential Drugs & Logistics Management</strong> – WHO Training</li>
+      <li><strong>Community Health & Disease Prevention Strategies</strong> – NCDC</li>
+      <li><strong>Public Health Leadership Program</strong> – Africa CDC (2023)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>In-Charge Officer – Essential Drugs Unit</h3>
+        <p class="role">Yobe State Primary Health Care Management Board (YSPHCMB)</p>
+        <p>
+          Supervise procurement, storage, and distribution of essential medicines across 17 LGAs. Designed a digital tracking system that reduced stockouts by 68%.
+        </p>
+        <div class="date">2015 – Present</div>
+      </div>
+      <div class="card">
+        <h3>Part-Time Tutor – Public Health</h3>
+        <p class="role">Al-Ma’arif College of Health Science & Technology, Potiskum</p>
+        <p>
+          Teach community medicine, drug logistics, and preventive care. Mentored 50+ students in field training and research.
+        </p>
+        <div class="date">2020 – Present</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><i class="fas fa-award"></i> Recognitions</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Award of Excellence – Essential Drugs Officer</h3>
+        <p>YSPHCMB | 2021</p>
+      </div>
+      <div class="card">
+        <h3>ASPMA 2022 Award</h3>
+        <p>Most Exceptional Part-Time Tutor of the Year</p>
+      </div>
+      <div class="card">
+        <h3>Community Service Recognition</h3>
+        <p>“Leader in Human Services” – Geidam LGA | 2020</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><i class="fas fa-project-diagram"></i> Key Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Yobe Essential Drugs Distribution Program</h3>
+        <p>Revamped supply chain logistics; ensured 95%+ facility coverage with life-saving medicines.</p>
+        <div class="date">2018 – Present</div>
+      </div>
+      <div class="card">
+        <h3>Community Health Outreach – Geidam LGA</h3>
+        <p>Coordinated vaccination drives and maternal health awareness campaigns for 12,000+ residents.</p>
+        <div class="date">2019</div>
+      </div>
+      <div class="card">
+        <h3>Student Mentorship Initiative</h3>
+        <p>Guided over 50 CHEW students in clinical rotations and public health research.</p>
+        <div class="date">2021 – Present</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><i class="fas fa-cogs"></i> Core Skills</h2>
+    <ul>
+      <li><strong>Essential Drugs Management</strong> – Procurement, inventory, cold chain, reporting</li>
+      <li><strong>Public Health Administration</strong> – Policy implementation, monitoring & evaluation</li>
+      <li><strong>Community Outreach & Education</strong> – Behavior change, maternal/child health</li>
+      <li><strong>Teaching & Curriculum Development</strong> – Adult learning, practical training</li>
+      <li><strong>Leadership & Team Management</strong> – Cross-functional coordination, capacity building</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><i class="fas fa-globe-africa"></i> Personal Info</h2>
+    <ul>
+      <li><strong>Full Name:</strong> Haruna Garba Geidam</li>
+      <li><strong>Location:</strong> Geidam, Yobe State, Nigeria</li>
+      <li><strong>Languages:</strong> English, Hausa, Kanuri</li>
+      <li><strong>Email:</strong> <a href="mailto:harunagg@example.com" style="color:var(--care);">harunagg@example.com</a></li>
+      <li><strong>Phone:</strong> +234 708 003 3765</li>
     </ul>
   </section>
 
   <footer>
-    Designed for the future of African healthcare. &copy; 2025 — 
-    <a href="#" onclick="alert('Powered by tomorrow’s vision. Stay ready.'); return false;">Sir Haruna Garba Gaidam</a>
+    Designed for impact. Built for the future. &copy; 2025 — 
+    <a href="#">Haruna Garba Geidam</a> | A health architect shaping Nigeria’s tomorrow.
   </footer>
 
   <script>
-    // Auto Dark/Light Mode Based on Time
-    const hour = new Date().getHours();
-    const body = document.body;
-    if (hour > 6 && hour < 18) {
-      body.classList.add('day');
-    }
-
-    // Add subtle float animation on scroll
+    // Float animation on scroll
     const cards = document.querySelectorAll('.card, section');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -503,20 +727,20 @@
 
     cards.forEach(card => {
       card.style.opacity = 0;
-      card.style.transform = 'translateY(20px)';
-      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      card.style.transform = 'translateY(24px)';
+      card.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
       observer.observe(card);
     });
 
-    // Optional: Pulse halo on interaction
-    document.querySelector('.glow-container').addEventListener('mouseenter', function () {
-      this.style.boxShadow = '0 0 30px rgba(14, 165, 233, 0.6)';
+    // Hexagon pulse on hover
+    document.querySelector('.hexagon').addEventListener('mouseenter', function () {
+      this.style.boxShadow = '0 0 40px rgba(255, 255, 255, 0.4)';
     });
 
-    document.querySelector('.glow-container').addEventListener('mouseleave', function () {
-      this.style.boxShadow = '0 0 20px rgba(14, 165, 233, 0.4)';
+    document.querySelector('.hexagon').addEventListener('mouseleave', function () {
+      this.style.boxShadow = 'none';
     });
   </script>
 
 </body>
-  </html>
+</html>
